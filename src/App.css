@@ -28,6 +28,44 @@
   color: #61dafb;
 }
 
+.Parrafo-PC {
+  font-size: calc(10px + 1vmin);
+  color: yellowgreen;
+}
+
+.container__fields {
+  display: flex;
+  width: 400px; 
+  justify-content: center;
+  margin-top: 5px;   
+}
+
+.App-label {
+  text-align: start;
+  font-style: italic;
+  width: 160px;
+  margin-right: 10px ;
+  font-size: 16px;
+}
+
+.App-inputs {
+  width: 210px;
+  height: 20px;
+  border: solid red 1px;
+  border-radius: 5px;
+}
+
+.App-buttom {
+  width: 100px;
+  height: 25px;
+  margin-top: 0.3rem;
+  border: solid blue 1px;
+  border-radius: 5px;
+  background-color: #61dafb;
+  color: black;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
