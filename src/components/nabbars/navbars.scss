@@ -1,0 +1,103 @@
+.nav__users {
+    width: 100%;
+    color: goldenrod;
+    border-bottom: solid gold 1px;
+    &__ul{
+        display: flex;
+        justify-content: flex-end;
+        align-content: center;
+        li{
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-right: 15px;
+        }
+    }
+}
+
+.nav__menu {
+    color: white;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__ul__logo{
+        display: flex;
+        justify-content: space-between;
+        width: 28%;
+        li{
+            display: inline-block;
+            //margin: 0px 10px 0px 10px;
+            padding: 0px 20px 0px 20px;
+            a{
+                display: flex;
+                flex-direction: column;
+                color: white;
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+                position: absolute;
+                margin: 0px;
+                padding: 0px;
+     
+                li{
+                   display: none;    
+                   background-color: #282c34;
+                   justify-content: flex-start; 
+                }
+                &:hover li{
+                    background-color: white;
+                }    
+            }
+            &:hover ul{
+                display: block;
+                z-index: 9999;
+                background-color: #282c34;;
+
+            }
+        }
+        
+    }
+    &__ul__action{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-self: center;
+        li{
+            display: inline-block;
+            padding: 4px 25px 5px 25px;
+            margin: 0px 25px 0px 25px;
+            
+        }
+        .cajaDeTexto{
+            width: 200px;
+            height: 30px;
+            margin: 5px;
+            padding: 0px 5px 0px 5px;
+            .cajaDeTexto2{
+                width: 100%;
+                height: 100%;
+                border-radius: 7px;
+                border: solid black 2px;
+                text-align: center;
+            }
+        }
+        .busqueda{
+            background-color: rgb(12, 77, 12);
+            border: white solid 1px;
+            border-radius: 8px;          
+            font-weight: 400;
+            margin: 0px 0px 0px 0px;
+            
+        } 
+        .busqueda:hover {
+            background-color: white;
+            color: black;
+            font-weight: 400;
+        }
+    
+    }
+}
