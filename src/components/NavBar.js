@@ -1,4 +1,5 @@
 import './navbars.scss'
+import CartWidget from './CartWidget';
 
 const NavBar = () =>{
     return(
@@ -17,7 +18,7 @@ const NavBar = () =>{
             <ul className="nav__menu__ul__action">
                 <li className="cajaDeTexto"><input className="cajaDeTexto2" type="text" value="QUE ESTAS BUSCANDO?"></input></li>
                 <li className="busqueda">BUSCAR</li>
-                <li className="car"><img src=""></img></li>
+                <CartWidget></CartWidget>
                 <li className="user">USUARIO</li>
             </ul>
         </nav>

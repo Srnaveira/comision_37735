@@ -1,0 +1,33 @@
+.contenedor{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 700px;
+    border: solid blue 2px;
+    background-color: burlywood;
+}
+
+.titulo {
+    color: blue;
+    margin: 2rem 3rem 2rem 3rem;
+    display: flex;
+    width: 350px;
+    justify-content: center;
+}
+
+.foto{
+    display: flex;
+    margin: 0rem 3rem 0rem 3rem;
+    border: solid white 1px;
+    width: 350px;
+    height: 500px;
+}
+
+.precio{
+    color: blue;
+    display: flex;
+    margin: 1rem 3rem 1rem 3rem;
+    width: 350px;
+    justify-content: center;
+}
