@@ -1,4 +1,6 @@
+import ItemCount from './ItemCount';
 import './itemlistcontainer.css';
+import onAdd from './onAdd.js'
 
 const ItemListContainer = ({titulo , imagen, precio}) =>{
 
@@ -11,6 +13,7 @@ const ItemListContainer = ({titulo , imagen, precio}) =>{
             <div>
                 <h2 className="precio">$ {precio}</h2>
             </div>
+            <ItemCount stock="9" initial="0" onAdd={onAdd}/>
         </div>
     );
 

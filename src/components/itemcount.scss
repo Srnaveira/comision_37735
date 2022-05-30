@@ -1,0 +1,66 @@
+.contador {
+    height: 100%;
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    &__div{
+        display: flex;
+        justify-content: space-between;
+        &__rest{
+            border: solid black 3px;
+            height: 100%;
+            width: 40px;
+            font-size: larger;
+            background-color: tomato;
+            color: black;
+            font-weight: 400;
+
+        }
+        &__number{
+            height: 100%;
+            width: 40px;
+            font-size: larger;
+            font-weight: 400;
+
+        }
+        &__sum{
+            border: solid black 3px;
+            height: 100%;
+            width: 40px;
+            font-size: larger;
+            background-color: tomato;
+            color: black;
+            font-weight: 400;
+
+        }
+    
+    }
+    &__button{
+        background-color: blue;
+        border: black solid 1px;
+        border-radius: 5px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;
+        font-size: medium;
+        font-weight: 600;
+        height: 30px;
+        width: auto;
+        text-align: center;
+        padding: 0.25rem 1.5rem 0.3rem 1.5rem ; 
+    }
+    &__button:hover{
+        background-color: green;
+
+    }
+
+
+
+
+
+
+
+
+
+}
