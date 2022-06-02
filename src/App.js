@@ -10,7 +10,7 @@ function App() {
       </header>
         <NavBarUser></NavBarUser>
         <NavBar></NavBar>
-        <ItemListContainer titulo="EL NOMBRE DEL VIENTO" imagen="https://www.popularlibros.com/imagenes.webp/9788401/978840133720.webp" precio="5249.00" />
+        <ItemListContainer></ItemListContainer>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 .contador {
     height: 100%;
-    width: 80%;
+    width: 70%;
     justify-self: center;
     align-self: center;
     align-items: center;
@@ -8,6 +8,7 @@
     &__div{
         display: flex;
         justify-content: space-between;
+        background-color: wheat;
         &__rest{
             border: solid black 3px;
             height: 100%;
@@ -48,6 +49,7 @@
         height: 30px;
         width: auto;
         text-align: center;
+        margin-top: 10px;
         padding: 0.25rem 1.5rem 0.3rem 1.5rem ; 
     }
     &__button:hover{

@@ -1,9 +1,18 @@
+.principalContenedor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+}
+
 .contenedor{
-    margin-top: 4rem;
+    margin: 1rem;
     display: flex;
     flex-direction: column;
     width: 450px;
-    height: 720px;
+    height: 735px;
     border: solid blue 2px;
     background-color: burlywood;
 }

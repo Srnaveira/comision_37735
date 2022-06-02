@@ -1,21 +1,29 @@
-import ItemCount from './ItemCount';
+import { useEffect, useState } from 'react';
+import { cargarProductos } from '../mock/cargarProductos';
+import ItemList from './ItemList';
 import './itemlistcontainer.css';
-import onAdd from './onAdd.js'
 
-const ItemListContainer = ({titulo , imagen, precio}) =>{
+
+const ItemListContainer = () =>{
+
+    const [items, setItems] = useState([])
+  
+
+    useEffect(() => {
+        cargarProductos()
+            .then((resp) => {
+                setItems(resp)
+            })
+            .catch((error) => {
+                console.log('ERROR', error)
+            })
+    },)
 
     return(
-        <div className="contenedor">
-            <div><h2 className="titulo">{titulo}</h2></div>
-            <div>
-                <img className="foto" src={imagen}></img>
-            </div>
-            <div>
-                <h2 className="precio">$ {precio}</h2>
-            </div>
-            <ItemCount stock="9" initial="0" onAdd={onAdd}/>
+        <div className="principalContenedor">
+            <ItemList items={items}/>
         </div>
-    );
+        );
 
 }
 

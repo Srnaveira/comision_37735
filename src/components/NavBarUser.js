@@ -1,4 +1,4 @@
-import './navbars.scss';
+import './navbar.scss';
 
 const NavBarUser = () => {
         return(
