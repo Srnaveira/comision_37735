@@ -22,9 +22,9 @@ const ItemCount = ({stock, initial, onAdd}) =>{
             <>
                 <div className="contador">
                     <div className="contador__div">
-                        <spam className="contador__div__rest" onClick={rest}>-</spam>        
+                        <input type="button" className="contador__div__rest" onClick={rest} value="-"/>        
                         <spam className="contador__div__number">{number}</spam>
-                        <spam className="contador__div__sum" onClick={sum}>+</spam>
+                        <input type="button" className="contador__div__sum" onClick={sum} value="+"/> 
                     </div>
                     <input className="contador__button" type="button" value="AGREGAR AL CARRITO" onClick={() => onAdd(number)}></input>
                 </div>

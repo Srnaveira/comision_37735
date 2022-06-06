@@ -1,0 +1,73 @@
+.contenedor__detail{
+      height: 97vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      .div__detail{
+             height: 60vh;
+             display: flex;
+             margin: 3rem;
+             flex-direction: column;
+             &__encabezados{
+                  display: flex;
+                  flex-direction: column;
+                  border-bottom: solid wheat;
+                  color: rgba(162, 162, 56, 0.866);
+                  text-align: start;
+                  height: 7vh;
+                  width: 100%;
+                  .titulo{
+                        height: 4vh;
+                        text-transform: uppercase;
+                        align-items: center;
+                  }
+                  .autor{
+                        height: 3vh;
+                        text-align: start;
+                        padding-top: 0.5rem; 
+                  }
+              
+              } 
+              &__detalle{
+                      display: flex;
+                      justify-content: space-between;
+                      height: 44vh;
+                      &--imagen{
+                        width: auto;
+                        padding: 2rem;
+                      }
+                      img{
+                        width: 340px;
+                      }
+                      &--resto{
+                        justify-content: space-between;
+                        margin: 2rem 1rem 2rem 1rem;
+                        padding: 2rem 1rem 2rem 1rem ;
+                        p{
+                          font-size: larger;
+                          text-align: justify;
+                          padding-bottom: 2rem;
+                          color: rgba(162, 162, 56, 0.866);
+                      
+                        }
+                        span{
+                          color: wheat;
+                          font-weight: 800;
+                          font-family: Arial, Helvetica, sans-serif;
+                          font-size: 3rem;
+                        }
+
+                      }                      
+                      &--compra{
+                          display: flex;
+                          height: 7vh;
+                          justify-content: center;
+                      }
+               }
+      
+      
+        }
+
+
+}
