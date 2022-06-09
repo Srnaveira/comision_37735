@@ -1,14 +1,23 @@
+import { Link } from 'react-router-dom'
 //import ItemCount from "./ItemCount"
 //import onAdd from './onAdd.js';
+
+
 
 const Item = ({item}) => {
     return(
             <div className="contenedor">
-               <div><h2 className="titulo" style={{textTransform: 'uppercase'}}>{item.titulo}</h2></div>
-               <div>
+               <div className="contenedor__titulo">
+                   <h2 className="titulo" style={{textTransform: 'uppercase'}}>{item.titulo}</h2>
+               </div>
+               <div className="contenedor__foto">
                    <img className="foto" src={item.imagen}></img>
                </div>
-               <input className="button_Detail" type="button" value="DETALLE"></input>
+               <div className="button">
+                   <Link to={`/producto/${item.id}`}>
+                        <input className="button_Detail" type="button" value="DETALLE"></input>
+                    </Link>
+               </div>
             </div>
     );
 

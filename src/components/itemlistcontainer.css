@@ -11,32 +11,61 @@
     margin: 1rem;
     display: flex;
     flex-direction: column;
-    width: 420px;
-    height: 635px;
-    border: solid blue 2px;
-    background-color: burlywood;
+    width: 380px;
+    height: 500px;
+    border: solid white 3px;
+    background-color: rgb(244, 209, 144);
+}
+
+.contenedor__titulo{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid white;
+
 }
 
 .titulo {
-    color: blue;
-    margin: 2rem 3rem 2rem 3rem;
+    color: rgb(145, 109, 17);
+    margin-bottom: 1px;
     display: flex;
+    font-size: 22px;
     width: 350px;
+    height: 3.6rem;
     justify-content: center;
+    align-items: center;
+}
+
+.contenedor__foto{
+    height: 85%;
 }
 
 .foto{
     display: flex;
-    margin: 0rem 3rem 0rem 3rem;
+    margin: 0.4rem 3rem 0.4rem 3rem;
     border: solid white 1px;
-    width: 320px;
-    height: 400px;
+    width: 260px;
+    height: 340px;
 }
 
-.precio{
-    color: blue;
+.button{
+    height: 15%;
+    width: 100%;
     display: flex;
-    margin: 1rem 3rem 0.5rem 3rem;
-    width: 350px;
-    justify-content: center;
+    justify-content: center;  
+    align-items: center;
+}
+
+.button_Detail{
+    border-radius: 8px;
+    background-color: rgb(12, 77, 12);
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    padding-bottom: 1px;
+    font-size: large;
+    border: white solid 1px;
+    width: 7rem;
+    height: 2.5rem;
 }

@@ -38,7 +38,7 @@
                 color: white;
             }
             ul{
-                display: flex;
+                display: none;
                 flex-direction: column;
                 text-align: start;
                 position: absolute;
@@ -46,12 +46,12 @@
                 padding: 0px;
      
                 li{
-                   display: none;    
+                   display: block;    
                    background-color: #282c34;
                    justify-content: flex-start; 
-                }
-                &:hover li{
-                    background-color: white;
+                   &:hover {
+                    background-color:  rgb(12, 77, 12);
+                    }
                 }    
             }
             &:hover ul{

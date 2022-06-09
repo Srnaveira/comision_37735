@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './navbar.scss';
 
 const NavBarUser = () => {
@@ -5,7 +6,9 @@ const NavBarUser = () => {
             <nav className="nav__users">
                 <ul className="nav__users__ul">
                     <li className="Nav__useres__ul--li">
-                        LOGIN
+                        <Link to={"/login"}>
+                            LOGIN
+                        </Link>
                     </li>
                     <li className="Nav__useres__ul--li">
                         CREATE USER
