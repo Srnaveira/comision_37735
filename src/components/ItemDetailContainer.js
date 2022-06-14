@@ -3,31 +3,41 @@ import { useState, useEffect } from 'react';
 import { cargarProductos } from '../mock/cargarProductos';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
+import Spinner from './Spinner';
 
 const ItemDetailContainer = () => {
    
-    const [item, setItem] = useState([])
-    const [id, setId] = useState(null)
-
+    const [item, setItem] = useState(null)
+    const [loading, setLoading] = useState(true)
+    
     const { itemId } = useParams() 
-
+    const id = Number(itemId)
+    console.log(id)
+   
 
     useEffect(() => {
-        setId(itemId)
-        cargarProductos()
-               .then((resp) =>{
-                    setItem( resp.find( (item) => item.id === Number(id)) )
-               })
-               .catch((error) =>{
+        setLoading(true)
+            cargarProductos()
+                .then((resp) =>{
+                    setItem( resp.find((item) => item.id === id) )
+                    console.log(item)
+                    })
+                .catch((error) =>{
                     console.log("Error reportado :" , error)
-               })
-    }, [id, itemId])
+                })
+                .finally(() =>{
+                    setLoading(false)
+                })
+    }, [])
 
     return(
         <div className='contenedor__detail'>
-            <ItemDetail item={item} />
-        </div>
-   
+            {
+                loading
+                ?   <Spinner />
+                :   <ItemDetail item={item} />         
+            }
+         </div>
         )
 
 }

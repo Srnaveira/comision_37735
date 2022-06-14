@@ -8,6 +8,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import Footer from './components/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Ups from './components/Ups';
+import Spinner from './components/Spinner';
 
 
 
@@ -27,6 +28,7 @@ function App() {
                       <Route path='/login' element={ <Login/>} />
                       <Route path='/team' element={ <Team/>} />
                       <Route path='*' element={ <Ups/>} />
+                      <Route path='/spinner' element={ <Spinner/>} />
                 </Routes>
 
                 <Footer />

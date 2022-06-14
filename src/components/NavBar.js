@@ -6,7 +6,7 @@ const NavBar = () =>{
     return(
         <nav className="nav__menu">
             <ul className="nav__menu__ul__logo">
-                <li className=""><Link to={"/"}>EL BAUL</Link></li>
+                <li className="" style={{fontSize: '20px', fontWeight: 'bold'}}><Link to={"/"}>EL BAUL</Link></li>
                 <li><a href="">GENEROS</a>
                     <ul>
                         <li><Link to={'/genero/ACCION'}>ACCION</Link></li>

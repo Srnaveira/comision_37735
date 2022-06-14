@@ -1,6 +1,7 @@
 .nav__users {
-    background-color: black;
+    background-color: #282c34;
     width: 100%;
+    height: 1.3vh;
     color: goldenrod;
     border-bottom: solid gold 1px;
     &__ul{
@@ -18,9 +19,9 @@
 
 .nav__menu {
     color: white;
-    background-color: black;
+    background-color: #282c34;
     width: 100%;
-    height: 40px;
+    height: 3vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,7 +58,7 @@
             &:hover ul{
                 display: block;
                 z-index: 9999;
-                background-color: #282c34;;
+                background-color: #282c34;
 
             }
         }
@@ -83,7 +84,7 @@
                 width: 100%;
                 height: 100%;
                 border-radius: 7px;
-                border: solid black 2px;
+                border: solid #282c34 2px;
                 text-align: center;
             }
         }
@@ -97,7 +98,7 @@
         } 
         .busqueda:hover {
             background-color: white;
-            color: black;
+            color: #282c34;
             font-weight: 400;
         }
     

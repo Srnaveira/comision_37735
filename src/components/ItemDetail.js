@@ -1,7 +1,20 @@
+import {useState} from "react";
 import ItemCount from './ItemCount'
-import onAdd from './onAdd.js';
 
 const ItemDetail = ({item}) => {
+
+    const [numvendido, setNumVendido] = useState(0)
+
+    const onAdd = () => {
+        console.log(numvendido)
+        const itemCarrito = {
+            ...item,
+            numvendido
+        }
+        console.log(itemCarrito)
+    }
+
+
 
     return(
         <div className='div__detail'>
@@ -15,9 +28,15 @@ const ItemDetail = ({item}) => {
                     </div>    
                     <div className='div__detail__detalle--resto'>
                             <p>{item.resumen}</p>
-                            <span>$ {item.precio}</span>
+                            <span> $ {item.precio} </span>
                             <div className='div__detail__detalle--compra'>
-                                <ItemCount stock={item.stock} initial='0' onAdd={onAdd}/>
+                                <ItemCount 
+                                    stock={item.stock}
+                                    initial={'0'}
+                                    counter={numvendido}
+                                    setCounter={setNumVendido}
+                                    onAdd={ onAdd }
+                                />
                             </div>
                     </div>            
             </div>

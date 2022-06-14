@@ -1,0 +1,75 @@
+.formulario__Login{
+    background-color: black;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--objetos{
+        display: flex;
+        flex-direction: column;
+        height: 19vh;
+        width: 33vh;
+        background-color: rgb(244, 209, 144);
+        font-weight: bold;
+        font-size: 3rem;
+        border-radius: 40px;
+        .LoginTitulo{
+           border-bottom: rgba(162, 162, 56, 0.866) solid 2px;
+           color: rgb(145, 109, 17);
+           margin-top: 5%;
+           margin-bottom: 8%;
+           margin-left: 5%;
+           margin-right: 5%; 
+        }
+        .email{
+            height: 9%;
+            width: 70%;
+            color: black;
+            justify-content: center;
+            align-self: center;
+            border-radius: 10px;
+            margin-bottom: 3%;
+            font-size: large;
+            font-style: italic;
+            text-align: center;
+            font-weight: 600;
+        }    
+        .password{
+            height: 9%;
+            width: 70%;
+            color: black;
+            justify-content: center;
+            align-self: center;
+            border-radius: 10px;
+            margin-bottom: 3%;
+            font-size: large;
+            font-style: italic;
+            text-align: center;
+            font-weight: 600;
+        }    
+        .buttonSubmit{
+            height: 11%;
+            width: 30%;
+            align-self: center;
+            border-radius: 5px;
+            background-color: rgb(12, 77, 12);
+            border: white 1px solid;
+            color: white;
+            font-size: large;
+            font-style: italic;
+            text-align: center;
+            font-weight: 600;
+        }
+
+
+
+
+
+
+
+    }
+
+
+
+
+}   

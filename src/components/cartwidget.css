@@ -1,7 +1,50 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .div_principal {
-    background-color: black;
+    background-color: #282c34;
     position: relative;
-    width: 40px;
+    width: 42px;
     height: 35px;
     margin: 0rem 1rem 0rem 1.5rem;
 }
@@ -11,6 +54,7 @@
     display: flex;
     position: absolute;
     border: white solid 1px;
+    border-radius: 7px;
     width: 41px;
     height: 35px;
     justify-content: center;
@@ -20,12 +64,14 @@
 
 .numero{
     position: absolute;
-    top: 4%;
-    left: 61%;
+    font-size: small;
+    font-weight: bolder;
+    top: 3%;
+    left: 57%;
     background: red;
     width: 16px;
     height: 16px;
-    border-radius: 50%;
+    border-radius: 30%;
     display: flex;
     justify-content: center;
     align-items: center;

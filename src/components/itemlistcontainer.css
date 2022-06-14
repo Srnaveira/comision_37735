@@ -1,11 +1,20 @@
+
 .principalContenedor{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    
-    
+    align-items: center;
+    height: 90vh;
 }
+
+@media screen and (max-width: 2800px){
+    .principalContenedor{
+        height: auto;
+    }
+  }
+
+
 
 .contenedor{
     margin: 1rem;
@@ -69,3 +78,4 @@
     width: 7rem;
     height: 2.5rem;
 }
+
