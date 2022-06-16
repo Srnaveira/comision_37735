@@ -1,17 +1,25 @@
-import {useState} from "react";
+import {useContext, useState} from "react";
+import { CartContext } from "../context/CartContext";
 import ItemCount from './ItemCount'
 
 const ItemDetail = ({item}) => {
 
+    const { addItem, isInCart, cart } = useContext(CartContext)
+
     const [numvendido, setNumVendido] = useState(0)
 
     const onAdd = () => {
-        console.log(numvendido)
+        if(numvendido === 0) return
+    
         const itemCarrito = {
-            ...item,
-            numvendido
+                    ...item,
+                    numvendido
         }
-        console.log(itemCarrito)
+
+        isInCart(item.id) ? console.log("El item ya se encuentra en el carrito =>", itemCarrito)
+        : addItem(itemCarrito)
+
+        console.log("el Contenido del carrito =>", cart)
     }
 
 
