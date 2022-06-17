@@ -11,7 +11,7 @@ import Ups from './components/Ups';
 import Spinner from './components/Spinner';
 import Contactos from './components/Contactos';
 import CartProvider from './context/CartContext';
-
+import Cart from './components/Cart';
 
 
 function App() {
@@ -33,6 +33,7 @@ function App() {
                               <Route path='/team' element={ <Team/>} />
                               <Route path='*' element={ <Ups/>} />
                               <Route path='/spinner' element={ <Spinner/>} />
+                              <Route path='/cart' element={ <Cart/>} />
                         </Routes>
 
                         <Footer />
