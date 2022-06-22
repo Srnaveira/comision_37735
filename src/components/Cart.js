@@ -41,7 +41,7 @@ const Cart = () =>{
             <div className="ContenedorAccion">
             <button onClick={() => clearCart()} className="Limpiar">LIMPIAR CARRITO</button>
             <button  disabled={true} onClick={() => clearCart()} className="FinalizarCompra">TERMINAR COMPRA</button>
-            <button onClick={() => handlerBack()} className="">SEGUIR COMPRANDO</button>
+            <button onClick={() => handlerBack()} className="SeguirComprando">SEGUIR COMPRANDO</button>
             
             </div>
         </div>
