@@ -15,7 +15,7 @@
                             titulo: "El temor de un hombre sabio",
                             autor: "Patrick Rothfuss", 
                             genero: "Fantasia",
-                            stock: 100,
+                            stock: 0,
                             precio: 6457.00,
                             descuento: 0,
                             imagen: "https://www.popularlibros.com/imagenes.webp/9788401/978840133963.webp",

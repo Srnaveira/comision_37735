@@ -1,10 +1,6 @@
 import { createContext, useState } from "react";
-import { cargarProductos } from "../mock/cargarProductos";
-
-
 
 export const CartContext = createContext()
-
 
 
 const CartProvider = ({children}) => {
@@ -12,15 +8,21 @@ const CartProvider = ({children}) => {
     const [ cart, setCart ] = useState([])
 
 
-    const addItem = (product) =>{
+    const addItem = (producto) =>{
 
-        setCart([...cart, product])
+        setCart([...cart, producto])
 
     }
 
     const isInCart = (id) =>{
 
         return cart.some( (producto) => producto.id === id) 
+
+    }
+
+    const calcTotal = () =>{
+
+        return( cart.reduce((acumulador , producto) => acumulador+= producto.precio, 0))
 
     }
 
@@ -31,12 +33,13 @@ const CartProvider = ({children}) => {
     }
 
     const clearCart = () =>{
+
         setCart( [] )
 
     }    
 
         return(
-                <CartContext.Provider value={{ addItem, isInCart, cart, removeItem, clearCart}}>
+                <CartContext.Provider value={{ addItem, isInCart, cart, removeItem, clearCart, calcTotal}}>
 
 
 

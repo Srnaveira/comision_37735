@@ -22,7 +22,7 @@
         &__rest:hover{
             border: solid white 3px;
             color: white;
-            background-color: green;
+            background-color: rgb(12, 77, 12);
         }
         &__number{
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
@@ -47,22 +47,22 @@
         &__sum:hover{
             border: solid white 3px;
             color: white;
-            background-color: green;
+            background-color: rgb(12, 77, 12);
         }
     
     }
     &__button{
-        background-color: green;
+        background-color: rgb(12, 77, 12);
         border: black solid 1px;
         border-radius: 5px;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         color: white;
         font-size: medium;
         font-weight: 600;
-        height: 38px;
-        width: auto;
+        height: auto;
+        width: 18rem;
         text-align: center;
-        margin-top: 10px;
+        margin-top: 13px;
         padding: 0.25rem 2rem 0.3rem 2rem ; 
     }
     &__button:hover{
@@ -71,12 +71,36 @@
 
     }
 
+    &__button2{
+        background-color: blue;
+        border: black solid 1px;
+        padding: 0.4rem 4.2rem 0.3rem 4.2rem ;
+        border-radius: 5px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;
+        font-size: medium;
+        font-weight: 600;
+        height: auto;
+        text-align: center;
+      }
+      &__button2:hover{
+        background-color: white;
+        color: black;
 
+    }
 
-
-
-
-
-
+    &__disabled{
+        background-color: red;
+        border: black solid 1px;
+        border-radius: 5px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;
+        font-size: medium;
+        font-weight: 600;
+        height: auto;
+        text-align: center;
+        margin-top: 10px;
+        padding: 0.25rem 2rem 0.3rem 2rem ; 
+    }
 
 }

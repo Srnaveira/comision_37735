@@ -15,6 +15,9 @@ import Cart from './components/Cart';
 
 
 function App() {
+
+  
+  
   return (
       <CartProvider>            
             <BrowserRouter>
@@ -33,7 +36,7 @@ function App() {
                               <Route path='/team' element={ <Team/>} />
                               <Route path='*' element={ <Ups/>} />
                               <Route path='/spinner' element={ <Spinner/>} />
-                              <Route path='/cart' element={ <Cart/>} />
+                              <Route path={'/cart'} element={ <Cart/>} />
                         </Routes>
 
                         <Footer />
@@ -45,3 +48,7 @@ function App() {
 }
 
 export default App;
+
+
+//<Route path='/cart' element={Cart.length === 0 ? <ItemListContainer/>: <Cart/>} />
+//

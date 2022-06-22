@@ -1,10 +1,17 @@
 import { useContext } from "react"
+import { useNavigate } from "react-router-dom"
 import { CartContext } from "../context/CartContext"
 import './cart.scss'
 
 const Cart = () =>{
 
-    const { cart, removeItem } = useContext(CartContext)
+    const { cart, removeItem, clearCart, calcTotal } = useContext(CartContext)
+
+    const volver = useNavigate()
+
+    const handlerBack = () => {
+        volver('/')
+    }
 
     return(
 
@@ -27,7 +34,16 @@ const Cart = () =>{
             ))
 
             }    
+            <div className="ContenedorPrecio">
+                <p className="precioTotal">Total:</p>
+                <p className="precioTotal">$ {calcTotal()}</p>
+            </div>
+            <div className="ContenedorAccion">
+            <button onClick={() => clearCart()} className="Limpiar">LIMPIAR CARRITO</button>
+            <button  disabled={true} onClick={() => clearCart()} className="FinalizarCompra">TERMINAR COMPRA</button>
+            <button onClick={() => handlerBack()} className="">SEGUIR COMPRANDO</button>
             
+            </div>
         </div>
         
 

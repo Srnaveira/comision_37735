@@ -6,10 +6,9 @@ const ItemDetail = ({item}) => {
 
     const { addItem, isInCart, cart } = useContext(CartContext)
 
-    const [numvendido, setNumVendido] = useState(0)
+    const numvendido = 1
 
     const onAdd = () => {
-        if(numvendido === 0) return
     
         const itemCarrito = {
                     ...item,
@@ -39,10 +38,8 @@ const ItemDetail = ({item}) => {
                             <span> $ {item.precio} </span>
                             <div className='div__detail__detalle--compra'>
                                 <ItemCount 
+                                    idProducto={item.id} 
                                     stock={item.stock}
-                                    initial={'0'}
-                                    counter={numvendido}
-                                    setCounter={setNumVendido}
                                     onAdd={ onAdd }
                                 />
                             </div>
