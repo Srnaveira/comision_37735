@@ -1,9 +1,11 @@
+//import { cargarProductos } from '../mock/cargarProductos';
 import './itemdetailcontainer.scss';
 import { useState, useEffect } from 'react';
-import { cargarProductos } from '../mock/cargarProductos';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
 import Spinner from './Spinner';
+import { db } from './Firebase/Config';
+import { doc, getDoc } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
    
@@ -11,23 +13,28 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true)
     
     const { itemId } = useParams() 
-    const id = Number(itemId)
-    console.log(id)
-   
+ 
 
     useEffect(() => {
         setLoading(true)
-            cargarProductos()
-                .then((resp) =>{
-                    setItem( resp.find((item) => item.id === id) )
-                    console.log(item)
-                    })
-                .catch((error) =>{
-                    console.log("Error reportado :" , error)
-                })
-                .finally(() =>{
-                    setLoading(false)
-                })
+        
+        const docRef = doc(db, "productos", itemId)
+
+        getDoc(docRef)
+            .then((datproducts) => {
+
+                setItem({ 
+                    id: datproducts.id,
+                    ...datproducts.data()
+                })   
+            })
+            .catch((error) =>{
+                console.log("Error reportado :" , error)
+            })
+            .finally(() =>{
+                setLoading(false)
+            })         
+
     }, [])
 
     return(
@@ -44,3 +51,17 @@ const ItemDetailContainer = () => {
 
 
 export default ItemDetailContainer;
+
+
+
+//   const id = Number(itemId)
+//cargarProductos()
+//.then((resp) =>{
+//    setItem( resp.find((item) => item.id === id) )
+//})
+//.catch((error) =>{
+//    console.log("Error reportado :" , error)
+//})
+//.finally(() =>{
+//    setLoading(false)
+//})
